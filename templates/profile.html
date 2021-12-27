@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ template "head.html" }}
+  </head>
+  <body>
+    {{ template "navbar.html" }}
+    <section class="container">
+      <h1>Rocky's Lists</h1>
+      <form method="get" action="/RockList/List">
+        <div class="input-group">
+          <label>Choose a list:</label>
+          <br/>
+          <select name="list" class="form-control">
+            <option value="wish-list" selected>wish-list</option>
+            <option value="got-list">got-list</option>
+            <option value="disc-list">disc-list</option>
+          </select>
+          <br/>
+          <br/>
+          <br/>
+          <label>Show the whole list:</label>
+          <br/>
+          <input type="submit" value="Show" class="btn btn-default"/>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

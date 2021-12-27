@@ -1,0 +1,137 @@
+body {
+  background-color: #323232;
+  color: white;
+}
+a {
+  color: #8ff !important;
+}
+a:hover {
+  color: #4783b0 !important;
+}
+.container {
+  padding-top: 5%;
+}
+.navbar {
+  background-color: #1c1c1c;
+  border: none;
+}
+.navbar-brand {
+  font-family: "Charmonman";
+  font-size: 28px;
+  font-weight: bold;
+}
+.navbar .container {
+  padding-top: 0;
+}
+.nav li:hover {
+  background-color: white;
+}
+.active a {
+  color: #4783b0 !important;
+}
+.header-title {
+  margin: 0 1.6%;
+  padding-bottom: 3%;
+}
+.disc-data-container {
+  margin: 5%;
+}
+.img-cover {
+  box-shadow: 0 30px 30px #111;
+  width: 100%;
+}
+.disc-data {
+  font-size: 18px;
+  margin: 5% 0;
+}
+.loading-data {
+  background-color: #202020;
+  margin: 0.5% 0;
+  padding: 5% 0;
+  width: 100%;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+#load-more-btn {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 8%;
+  width: 84%;
+}
+#load-more-btn .glyphicon {
+  transition: padding-top 0.2s;
+}
+#load-more-btn:hover .glyphicon {
+  padding-top: 0.7%;
+}
+.cover-container {
+  width: 50%;
+}
+.cover-container img {
+  margin-bottom: 10%;
+  width: 100%;
+}
+.disc-info {
+  font-size: 24px;
+  padding-top: 15%;
+}
+.return-link {
+  margin-bottom: 10%;
+  padding: 6px 0;
+}
+select.form-control {
+  padding-left: 8px;
+}
+input[type="file"] {
+  display: none;
+}
+.upload-drop-zone {
+  border: 2px dashed #8ff;
+  border-radius: 6px;
+  color: #8ff;
+  font-size: 1.75em;
+  font-weight: normal;
+  margin: 5% 0;
+  padding: 2% 0;
+  text-align: center;
+  width: 100%;
+}
+.drop {
+  border-color: #4783b0;
+  color: #4783b0;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 10%;
+  }
+  .disc-detail {
+    width: 50%;
+  }
+  .img-cover {
+    max-height: 270px;
+    max-width: 270px;
+  }
+  .title.text-ellipsis {
+    max-width: 243px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding-top: 15%;
+  }
+  .disc-detail {
+    width: 100%;
+  }
+  #disc-container {
+    float: none;
+    width: 90%;
+  }
+}

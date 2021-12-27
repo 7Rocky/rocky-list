@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>{{ template "head.html" }}</head>
+  <body>
+    {{ template "navbar.html" }}
+    <section class="container">
+      <header class="header-title">
+        <h1 id="list" class="text-center">{{ .List }}</h1>
+      </header>
+      <ul class="list-inline text-center">
+        <li id="disc-container" class="col-xs-6">
+          <img class="img-cover" alt="{{ .Title }} - {{ .Artist }}" src="data:image/jpeg;base64,{{ .Cover }}">
+        </li>
+        <li class="col-xs-6 disc-detail">
+          <div class="col-xs-12">
+            <div class="disc-info">
+              <div id="title" class="text-ellipsis">{{ .Title }}</div>
+              <div id="artist" class="text-ellipsis">{{ .Artist }}</div>
+              <div id="released" class="text-ellipsis">{{ .Released }}</div>
+            </div>
+            <hr/>
+            <form method="post" action="/RockList/rocky/Edit" enctype="multipart/form-data">
+              <div id="disc-edit">
+                <button id="edit-btn" class="btn btn-info pull-right">Edit disc</button>
+              </div>
+            </form>
+            <div class="return-link pull-left">
+              <a href="/RockList/List?list={{ .List }}">Return to {{ .List }}</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

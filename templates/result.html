@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ template "head.html" }}
+    <script src="/RockList/js/getData.js"></script>
+  </head>
+  <body>
+    {{ template "navbar.html" }}
+    <section class="container">
+      <header class="header-title">
+        <h1 id="list" class="text-center">{{ .list }}</h1>
+      </header>
+      <br/>
+      <h3>Number of discs: {{ .discs | len }}</h3>
+      <ul id="disc-list" class="list-inline text-center">
+        {{ range .discs }}
+        <li class="col-sm-4">
+          <div class="disc-data-container">
+            <img class="img-cover" alt="{{ .Title }} - {{ .Artist }}" src="data:image/jpeg;base64,{{ .Cover }}" onclick="location.href = '/RockList/Disc?list={{ .List }}&title={{ .Title }}&artist={{ .Artist }}&released={{ .Released }}'">
+            <div class="disc-data">
+              <div id="title" class="title text-ellipsis">{{ .Title }}</div>
+              <div id="artist" class="artist text-ellipsis">{{ .Artist }}</div>
+              <div id="released" class="released text-ellipsis">{{ .Released }}</div>
+            </div>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+  </body>
+</html>
